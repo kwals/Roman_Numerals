@@ -11,12 +11,12 @@ def roman_numeral_converter numeral
   # numeral = numeral.sub(/XC/, "XXXX")
   # numeral = numeral.sub(/IX/, "IIIIIIIII")
   # numeral = numeral.sub(/IV/, "IIII")
-  hash = { "CM" => "CCCCCCCCC", "CD" => "CCCC", "XL" => "XXXXXXXXX", "XC" => "XXXX", "IX" => "IIIIIIIII", "IV" => "IIII"}
-  # better_hash ={ "CM" => 900, "CD" => 400, "XL" => 90, "XC" => 40, "IX" => 9, "IV" => 4}
-  hash.each do |key,value| 
+  #hash = { "CM" => "CCCCCCCCC", "CD" => "CCCC", "XL" => "XXXXXXXXX", "XC" => "XXXX", "IX" => "IIIIIIIII", "IV" => "IIII"}
+  better_hash ={ "CM" => 900, "CD" => 400, "XL" => 90, "XC" => 40, "IX" => 9, "IV" => 4}
+  better_hash.each do |key,value| 
     if numeral.include?(key)
-      # number += value
-      numeral.sub!(key, value)
+      number += value
+      numeral.sub!(key, "")
     end 
   end
   # return numeral
