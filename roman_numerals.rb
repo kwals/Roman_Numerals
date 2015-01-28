@@ -85,7 +85,7 @@ end
     
     def test_a_whole_bunch_of_numbers
       (1..9999).each do |n|
-        assert roman_numeral_converter(roman_numeral_converted(n)),n
+        assert roman_numeral_converter(roman_numeral_converter(n)),n
       end
-      
+    end  
 end
